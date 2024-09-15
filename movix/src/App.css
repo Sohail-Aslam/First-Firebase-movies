@@ -12,7 +12,6 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0;
-  height: 100vh;
 }
 
 .logo {
@@ -31,6 +30,7 @@ body {
 
 .account {
   display: flex;
+  position: fixed;
 }
 
 .card {
@@ -53,6 +53,7 @@ body {
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
+  overflow: auto;
 }
 
 .input {
@@ -78,6 +79,7 @@ button {
   align-items: center;
   margin: 10px;
   position: relative;
+  width: 1000px;
 }
 
 .ball-container {
