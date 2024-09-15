@@ -1,0 +1,124 @@
+#root {
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Kristi&display=swap');
+
+body {
+  background: radial-gradient(#0f0000, #330a04);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  height: 100vh;
+}
+
+.logo {
+  font-family: "Kristi", cursive;
+  font-size: 3em;
+  font-weight: 700;
+  background: linear-gradient(45deg, #e93a3a, #db5484, #a5061e, #fcadcf);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+  transition: text-shadow 300ms;
+  margin: 0;
+  right: 80px;
+  position: absolute;
+}
+
+.account {
+  display: flex;
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.movie-card {
+  background: #270202;
+  border-radius: 20px;
+  margin: 20px;
+  padding: 5px;
+  color: aliceblue;
+  font-size: 18px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.input {
+  border: none;
+  width: 220px;
+  height: 30px;
+  padding: 5px;
+  margin: 5px;
+}
+
+button {
+  background-color: #2b0303;
+  color: aliceblue;
+  width: fit-content;
+  height: 30px;
+  margin: 5px;
+}
+
+.section {
+  background: #3d0404;
+  border-radius: 30px;
+  padding: 20px;
+  align-items: center;
+  margin: 10px;
+  position: relative;
+}
+
+.ball-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+.ball {
+  width: 100px;
+  height: 100px;
+  background-color: #1d0202;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+}
+
+.content {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 20px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 1em;
+  z-index: 1;
+}
+
+.ball-container:hover .ball {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.ball-container:hover .content {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
